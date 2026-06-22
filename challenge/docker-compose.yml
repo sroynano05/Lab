@@ -1,0 +1,22 @@
+services:
+
+  web:
+    build: .
+
+    ports:
+      - "8080:80"
+
+    depends_on:
+      - db
+
+  db:
+    image: mysql:8.0
+
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+
+    volumes:
+      - ./web/init.sql.template:/tmp/init.sql.template
+      - ./entrypoint.sh:/entrypoint.sh
+
+    entrypoint: ["/bin/bash", "/entrypoint.sh"]

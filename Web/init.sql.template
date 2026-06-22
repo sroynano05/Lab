@@ -1,0 +1,15 @@
+CREATE DATABASE pixelkart;
+
+USE pixelkart;
+
+CREATE TABLE coupons (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    code VARCHAR(255),
+    discount VARCHAR(255)
+);
+
+INSERT INTO coupons (code, discount)
+VALUES
+('WELCOME10', '10% OFF'),
+('ARCADE20', '20% OFF'),
+('DEVFLAG', 'PLACEHOLDER_FLAG');

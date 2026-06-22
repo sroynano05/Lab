@@ -1,0 +1,22 @@
+name: PixelKart Coupons
+author: Ankush
+category: Web
+difficulty: Easy
+description: |
+  The retro arcade store “PixelKart” recently launched a coupon system.
+
+  Rumor says a hidden developer-only coupon exists inside the database.
+
+  Can you retrieve it?
+
+value: 100
+
+flags:
+  - flag{pixel_perfect_sqli}
+
+tags:
+  - sqli
+  - web
+  - beginner
+
+state: visible
